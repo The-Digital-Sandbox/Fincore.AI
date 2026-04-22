@@ -98,7 +98,7 @@ export default function Home() {
         <div className="flex items-center gap-3 px-3 pb-5 pt-2">
           <div className="w-[38px] h-[38px] rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white font-bold text-base font-sans">F</div>
           <div>
-            <div className="font-sans font-bold text-[17px] text-text-primary tracking-tight">Fincore AI</div>
+            <div className="font-sans font-bold text-[17px] text-text-primary tracking-tight">Fincore</div>
             <div className="text-[11px] text-text-tertiary">Design Prototype v3</div>
           </div>
         </div>
@@ -141,12 +141,10 @@ export default function Home() {
             <div className="h-full flex flex-col items-center justify-center relative overflow-hidden">
               <BlueWaveBg id="splash" animated />
               <div className="z-10 flex items-center overflow-hidden">
-                <span className="font-sans text-[52px] font-bold text-white tracking-tight uppercase splash-reveal leading-none">FINCORE</span>
-                <span className="font-sans text-[52px] font-bold tracking-tight uppercase splash-reveal-dot leading-none splash-ai-gloss ml-[6px]">AI</span>
+                <span className="font-sans text-[64px] font-bold text-white tracking-tight uppercase splash-reveal leading-none">FINCORE</span>
               </div>
-              <p className="mt-3 text-[15px] text-white/50 z-10 tracking-normal splash-tagline">Reframe your financial decisions</p>
-              <div className="w-[60px] h-[1px] bg-white/25 z-10 mt-4 splash-tagline" />
-              <p className="mt-3 text-[13px] text-white/35 z-10 tracking-widest uppercase splash-tagline">Make it count</p>
+              <p className="mt-3 text-[13px] text-white z-10 tracking-widest uppercase splash-tagline">Make it count</p>
+              <div className="w-[60px] h-[1px] bg-white/25 z-1.5 mt-2 splash-tagline" />
             </div>
           )}
 
@@ -164,7 +162,7 @@ export default function Home() {
                     <img src="/fincore-logo.svg" alt="Fincore App Icon" width={120} height={120} className="block w-full h-full" />
                   </div>
                   <p className="text-[16px] font-semibold text-[#1c1c1e] tracking-tight mt-3">App Icon</p>
-                  <p className="text-[12px] text-[#8e8e93]">Full colour with FAI text</p>
+                  <p className="text-[12px] text-[#8e8e93]">Full colour with F mark</p>
                   <div className="flex gap-2.5 mt-3">
                     <a href="/fincore-logo.svg" download="fincore-logo.svg" className="px-4 py-2 rounded-full bg-[#0A6FE8] text-white text-[12px] font-semibold shadow-sm hover:brightness-110 transition-all">SVG</a>
                     <button onClick={() => { const c = document.createElement('canvas'); c.width = 1024; c.height = 1024; const x = c.getContext('2d'); if (!x) return; const i = new Image(); i.onload = () => { x.drawImage(i, 0, 0, 1024, 1024); const a = document.createElement('a'); a.href = c.toDataURL('image/png'); a.download = 'fincore-logo.png'; a.click(); }; i.src = '/fincore-logo.svg'; }} className="px-4 py-2 rounded-full bg-white text-[#0A6FE8] text-[12px] font-semibold shadow-sm border border-[#e5e5ea] hover:bg-[#f5f5f7] transition-all cursor-pointer">PNG</button>
@@ -196,6 +194,185 @@ export default function Home() {
                   <div className="flex gap-2.5 mt-3">
                     <a href="/fincore-background.svg" download="fincore-background.svg" className="px-4 py-2 rounded-full bg-[#0A6FE8] text-white text-[12px] font-semibold shadow-sm hover:brightness-110 transition-all">SVG</a>
                     <button onClick={() => { const c = document.createElement('canvas'); c.width = 1920; c.height = 1080; const x = c.getContext('2d'); if (!x) return; const i = new Image(); i.onload = () => { x.drawImage(i, 0, 0, 1920, 1080); const a = document.createElement('a'); a.href = c.toDataURL('image/png'); a.download = 'fincore-background.png'; a.click(); }; i.src = '/fincore-background.svg'; }} className="px-4 py-2 rounded-full bg-white text-[#0A6FE8] text-[12px] font-semibold shadow-sm border border-[#e5e5ea] hover:bg-[#f5f5f7] transition-all cursor-pointer">PNG</button>
+                  </div>
+                </div>
+
+                {/* Icons */}
+                <div className="bg-white rounded-[24px] p-5 shadow-[0_1px_4px_rgba(0,0,0,0.06)]">
+                  <p className="text-[16px] font-semibold text-[#1c1c1e] tracking-tight mb-1">Icons</p>
+                  <p className="text-[12px] text-[#8e8e93] mb-4">Lucide icons used across the app</p>
+                  <div className="grid grid-cols-4 gap-3">
+                    {([
+                      { name: "Camera", Icon: Camera },
+                      { name: "Lock", Icon: Lock },
+                      { name: "Mail", Icon: Mail },
+                      { name: "PenLine", Icon: PenLine },
+                      { name: "Shield", Icon: Shield },
+                      { name: "Check", Icon: Check },
+                      { name: "ArrowRight", Icon: ArrowRight },
+                      { name: "Flashlight", Icon: Flashlight },
+                      { name: "User", Icon: User },
+                      { name: "Bell", Icon: Bell },
+                      { name: "CreditCard", Icon: CreditCard },
+                      { name: "HelpCircle", Icon: HelpCircle },
+                      { name: "LogOut", Icon: LogOut },
+                      { name: "ChevronRight", Icon: ChevronRight },
+                      { name: "ChevronDown", Icon: ChevronDown },
+                      { name: "Settings", Icon: Settings },
+                      { name: "X", Icon: X },
+                      { name: "Send", Icon: Send },
+                      { name: "Paperclip", Icon: Paperclip },
+                      { name: "Sparkles", Icon: Sparkles },
+                      { name: "Mic", Icon: Mic },
+                      { name: "ThumbsUp", Icon: ThumbsUp },
+                      { name: "ThumbsDown", Icon: ThumbsDown },
+                      { name: "Star", Icon: Star },
+                      { name: "Home", Icon: HomeIcon },
+                      { name: "QrCode", Icon: QrCode },
+                      { name: "BarChart3", Icon: BarChart3 },
+                      { name: "Landmark", Icon: Landmark },
+                      { name: "Brain", Icon: Brain },
+                      { name: "MessageCircle", Icon: MessageCircle },
+                    ] as { name: string; Icon: React.ComponentType<{ size?: number; className?: string }> }[]).map(({ name, Icon }) => (
+                      <div key={name} className="flex flex-col items-center gap-1.5 p-3 rounded-2xl bg-[#f2f2f7]" data-icon={name}>
+                        <Icon size={24} className="text-[#1c1c1e]" />
+                        <span className="text-[10px] text-[#8e8e93] font-medium mb-1">{name}</span>
+                        <div className="flex gap-1.5">
+                          <button
+                            className="px-2.5 py-1 rounded-full bg-[#0A6FE8] text-white text-[9px] font-semibold cursor-pointer hover:brightness-110 transition-all"
+                            onClick={() => {
+                              const el = document.querySelector(`[data-icon="${name}"] svg`);
+                              if (!el) return;
+                              const clone = el.cloneNode(true) as SVGElement;
+                              clone.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
+                              clone.setAttribute('width', '48');
+                              clone.setAttribute('height', '48');
+                              const blob = new Blob([new XMLSerializer().serializeToString(clone)], { type: 'image/svg+xml' });
+                              const a = document.createElement('a');
+                              a.href = URL.createObjectURL(blob);
+                              a.download = `${name}.svg`;
+                              a.click();
+                              URL.revokeObjectURL(a.href);
+                            }}
+                          >SVG</button>
+                          <button
+                            className="px-2.5 py-1 rounded-full bg-white text-[#0A6FE8] text-[9px] font-semibold border border-[#e5e5ea] cursor-pointer hover:bg-[#f5f5f7] transition-all"
+                            onClick={() => {
+                              const el = document.querySelector(`[data-icon="${name}"] svg`);
+                              if (!el) return;
+                              const clone = el.cloneNode(true) as SVGElement;
+                              clone.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
+                              clone.setAttribute('width', '128');
+                              clone.setAttribute('height', '128');
+                              clone.setAttribute('stroke', '#1c1c1e');
+                              const svgStr = new XMLSerializer().serializeToString(clone);
+                              const c = document.createElement('canvas');
+                              c.width = 128; c.height = 128;
+                              const ctx = c.getContext('2d');
+                              if (!ctx) return;
+                              const img = new Image();
+                              img.onload = () => {
+                                ctx.drawImage(img, 0, 0, 128, 128);
+                                const a = document.createElement('a');
+                                a.href = c.toDataURL('image/png');
+                                a.download = `${name}.png`;
+                                a.click();
+                              };
+                              img.src = 'data:image/svg+xml;base64,' + btoa(svgStr);
+                            }}
+                          >PNG</button>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Splash Screen */}
+                <div className="bg-white rounded-[24px] p-5 shadow-[0_1px_4px_rgba(0,0,0,0.06)] flex flex-col items-center">
+                  <div className="w-[200px] h-[432px] rounded-[28px] overflow-hidden shadow-[0_8px_30px_rgba(10,111,232,0.3)] relative">
+                    <div className="h-full flex flex-col items-center justify-center relative overflow-hidden" id="splash-preview">
+                      <BlueWaveBg id="splash-brand" animated />
+                      <div className="z-10 flex items-center overflow-hidden">
+                        <span className="font-sans text-[32px] font-bold text-white tracking-tight uppercase splash-reveal leading-none">FINCORE</span>
+                      </div>
+                      <p className="mt-2 text-[9px] text-white z-10 tracking-widest uppercase splash-tagline">Make it count</p>
+                      <div className="w-[40px] h-[1px] bg-white/25 z-10 mt-1.5 splash-tagline" />
+                    </div>
+                  </div>
+                  <p className="text-[16px] font-semibold text-[#1c1c1e] tracking-tight mt-3">Splash Screen</p>
+                  <p className="text-[12px] text-[#8e8e93]">Animated splash with logo reveal</p>
+                  <div className="flex gap-2.5 mt-3">
+                    <button
+                      className="px-4 py-2 rounded-full bg-[#0A6FE8] text-white text-[12px] font-semibold shadow-sm hover:brightness-110 transition-all cursor-pointer"
+                      onClick={async () => {
+                        const el = document.getElementById('splash-preview');
+                        if (!el) return;
+                        const W = 400, H = 864;
+                        const canvas = document.createElement('canvas');
+                        canvas.width = W; canvas.height = H;
+                        const ctx = canvas.getContext('2d');
+                        if (!ctx) return;
+                        const { Muxer, ArrayBufferTarget } = await import('mp4-muxer');
+                        const target = new ArrayBufferTarget();
+                        const muxer = new Muxer({
+                          target,
+                          video: { codec: 'avc', width: W, height: H },
+                          fastStart: 'in-memory',
+                        });
+                        const encoder = new VideoEncoder({
+                          output: (chunk, meta) => muxer.addVideoChunk(chunk, meta ?? undefined),
+                          error: (e) => console.error('VideoEncoder error:', e),
+                        });
+                        encoder.configure({ codec: 'avc1.42001f', width: W, height: H, bitrate: 4_000_000, framerate: 15 });
+                        // Reset animations
+                        el.style.animation = 'none';
+                        el.offsetHeight;
+                        el.style.animation = '';
+                        el.querySelectorAll('.splash-reveal, .splash-reveal-dot, .splash-tagline, .splash-ai-gloss').forEach((c) => {
+                          const h = c as HTMLElement;
+                          h.style.animation = 'none';
+                          h.offsetHeight;
+                          h.style.animation = '';
+                        });
+                        const { default: h2c } = await import('html2canvas');
+                        const fps = 15;
+                        const duration = 4000;
+                        const totalFrames = Math.ceil(duration / (1000 / fps));
+                        const wait = (ms: number) => new Promise(r => setTimeout(r, ms));
+                        for (let i = 0; i < totalFrames; i++) {
+                          try {
+                            const snap = await h2c(el, { backgroundColor: null, scale: 2, width: 200, height: 432 });
+                            ctx.clearRect(0, 0, W, H);
+                            ctx.drawImage(snap, 0, 0, W, H);
+                            const vf = new VideoFrame(canvas, { timestamp: i * (1_000_000 / fps) });
+                            encoder.encode(vf, { keyFrame: i % 15 === 0 });
+                            vf.close();
+                          } catch (e) { console.error('Frame error:', e); }
+                          await wait(1000 / fps);
+                        }
+                        await encoder.flush();
+                        muxer.finalize();
+                        const blob = new Blob([target.buffer], { type: 'video/mp4' });
+                        const a = document.createElement('a');
+                        a.href = URL.createObjectURL(blob);
+                        a.download = 'fincore-splash.mp4';
+                        a.click();
+                        URL.revokeObjectURL(a.href);
+                      }}
+                    >MP4</button>
+                    <button
+                      className="px-4 py-2 rounded-full bg-white text-[#0A6FE8] text-[12px] font-semibold shadow-sm border border-[#e5e5ea] hover:bg-[#f5f5f7] transition-all cursor-pointer"
+                      onClick={async () => {
+                        const el = document.getElementById('splash-preview');
+                        if (!el) return;
+                        const { default: h2c } = await import('html2canvas');
+                        const frame = await h2c(el, { backgroundColor: null, scale: 2, width: 200, height: 432 });
+                        const a = document.createElement('a');
+                        a.href = frame.toDataURL('image/png');
+                        a.download = 'fincore-splash.png';
+                        a.click();
+                      }}
+                    >PNG</button>
                   </div>
                 </div>
 
@@ -408,11 +585,11 @@ export default function Home() {
                 {/* Scroll nudge */}
                 <div className="bg-white/95 backdrop-blur-xl rounded-[28px] p-[22px] mx-4 mb-3.5 border border-white/80 shadow-[0_2px_12px_rgba(0,0,0,0.06)]">
                   {[
-                    { trait: "Openness", letter: "O", score: 72, desc: "Your high openness makes you naturally drawn to novelty.", tip: "Channel your love of new things into free experiences.", cost: "1,200", faith: "Faith will flag when novelty bias is driving a purchase." },
-                    { trait: "Conscientiousness", letter: "C", score: 45, desc: "Moderate conscientiousness means you sometimes plan and sometimes wing it.", tip: "Automate your finances with standing orders.", cost: "800", faith: "Faith will send gentle nudges." },
-                    { trait: "Extraversion", letter: "E", score: 81, desc: "Social situations energise you but can quietly drain your account.", tip: "Suggest free or cheaper social plans first.", cost: "1,800", faith: "Faith will track social spending patterns." },
-                    { trait: "Agreeableness", letter: "A", score: 63, desc: "You find it hard to say no \u2013 splitting bills, lending money, buying rounds.", tip: "Practice saying \u201CI\u2019ll get the next one.\u201D", cost: "600", faith: "Faith will help you set boundaries." },
-                    { trait: "Neuroticism", letter: "N", score: 38, desc: "You don\u2019t stress about money, but can overlook financial risks.", tip: "Set one review day per month.", cost: "400", faith: "Faith will schedule monthly check-ins." },
+                    { trait: "Openness", letter: "O", score: 72, definition: "How curious and open you are to new ideas, experiences, and unconventional thinking.", subtraits: [{ name: "Intellectual Curiosity", insight: "You research before buying but get drawn into new finds" }, { name: "Aesthetic Sensitivity", insight: "Visual appeal strongly influences your purchases" }, { name: "Creative Imagination", insight: "You gravitate toward novel products and experiences" }], profile: "Novelty drives your spending. New releases and unique finds bypass your rational filters.", faith: "Faith will flag novelty-driven impulse buys and suggest free alternatives." },
+                    { trait: "Conscientiousness", letter: "C", score: 45, definition: "How structured, disciplined, and goal-oriented you are in daily life.", subtraits: [{ name: "Organisation", insight: "You loosely track finances but miss recurring costs" }, { name: "Productiveness", insight: "You can stick to plans but often choose not to" }, { name: "Responsibility", insight: "Short-term wants sometimes override long-term commitments" }], profile: "You default to spontaneity. Subscriptions and unreviewed spending drift unchecked.", faith: "Faith will nudge you when spending drifts from your goals." },
+                    { trait: "Extraversion", letter: "E", score: 81, definition: "How energised and motivated you are by social interaction and group activity.", subtraits: [{ name: "Sociability", insight: "You spend more in groups than when alone" }, { name: "Assertiveness", insight: "You\u2019re quick to suggest plans, often costly ones" }, { name: "Energy Level", insight: "A busy social calendar means frequent spending" }], profile: "Social situations are your biggest financial blind spot. Rounds and spontaneous nights out add up fast.", faith: "Faith will track social spending and suggest lower-cost alternatives." },
+                    { trait: "Agreeableness", letter: "A", score: 63, definition: "How cooperative, trusting, and conflict-averse you are in social situations.", subtraits: [{ name: "Compassion", insight: "You over-tip and over-gift to avoid seeming tight" }, { name: "Respectfulness", insight: "You split bills evenly even when you spent less" }, { name: "Trust", insight: "You lend money without expecting it back" }], profile: "Saying no feels harder than overspending. You absorb costs to keep the peace.", faith: "Faith will help you set boundaries without straining relationships." },
+                    { trait: "Neuroticism", letter: "N", score: 38, definition: "How sensitive you are to stress, worry, and emotional fluctuations.", subtraits: [{ name: "Anxiety", insight: "Money stress rarely keeps you up at night" }, { name: "Depression", insight: "Low mood doesn\u2019t trigger comfort spending for you" }, { name: "Emotional Volatility", insight: "You stay steady but overlook small financial leaks" }], profile: "Your calm is a strength, but financial red flags don\u2019t trigger alarm bells.", faith: "Faith will schedule check-ins to surface patterns you\u2019d naturally overlook." },
                   ].map((t) => {
                     const c = traitColors[t.trait];
                     const open = openTraits.has(t.trait);
@@ -423,17 +600,31 @@ export default function Home() {
                             <span className="w-[26px] h-[26px] rounded-lg flex items-center justify-center text-white text-[13px] font-bold" style={{ background: `linear-gradient(135deg, ${c.from}, ${c.to})` }}>{t.letter}</span>
                             {t.trait}
                           </div>
-                          <span className="text-[13px] font-semibold text-primary">{t.score}th</span>
+                          <span className="text-[13px] font-semibold text-primary">{t.score}</span>
                         </div>
                         <div className="h-2 bg-surface rounded overflow-hidden"><div className="h-full rounded transition-all duration-700" style={{ width: `${t.score}%`, background: `linear-gradient(90deg, ${c.from}, ${c.to})` }} /></div>
                         <div className="flex items-center gap-1 mt-2 text-xs text-primary font-semibold">See more <ChevronDown size={12} className={`transition-transform ${open ? "rotate-180" : ""}`} /></div>
                         {open && (
-                          <div className="mt-3 p-4 bg-surface rounded-xl text-[13px] text-text-secondary leading-relaxed space-y-2">
-                            <p><strong>Score: {t.score}/100</strong></p>
-                            <p>{t.desc}</p>
-                            <p><strong>Tip:</strong> {t.tip}</p>
-                            <p><strong>Est. cost if unregulated:</strong> ~{"\u00A3"}{t.cost}/year</p>
-                            <p><strong>Faith:</strong> {t.faith}</p>
+                          <div className="mt-3 bg-surface rounded-xl text-[12px] text-text-secondary leading-relaxed overflow-hidden">
+                            <div className="p-3 border-b border-white/60">
+                              <p className="text-text-primary font-semibold mb-0.5">{t.trait} — {t.score}/100</p>
+                              <p>{t.definition}</p>
+                            </div>
+                            <div className="p-3 border-b border-white/60 space-y-2">
+                              {t.subtraits.map((s) => (
+                                <div key={s.name} className="flex items-start gap-2">
+                                  <span className="w-[6px] h-[6px] rounded-full mt-[5px] shrink-0" style={{ background: `linear-gradient(135deg, ${c.from}, ${c.to})` }} />
+                                  <p><strong>{s.name}</strong> — {s.insight}</p>
+                                </div>
+                              ))}
+                            </div>
+                            <div className="p-3 border-b border-white/60">
+                              <p className="text-text-primary font-semibold mb-0.5">Your Profile</p>
+                              <p>{t.profile}</p>
+                            </div>
+                            <div className="p-3 bg-primary-ultra">
+                              <p className="text-[12px] text-primary font-medium"><strong>How Faith Can Help</strong> — {t.faith}</p>
+                            </div>
                           </div>
                         )}
                       </div>
@@ -505,11 +696,11 @@ export default function Home() {
                     </div>
                     <div className="bg-white/95 backdrop-blur-xl rounded-[28px] p-[22px] mx-4 mb-3.5 border border-white/80 shadow-[0_2px_12px_rgba(0,0,0,0.06)]">
                       {[
-                        { trait: "Openness", letter: "O", score: 72, desc: "Your high openness makes you naturally drawn to novelty.", tip: "Channel your love of new things into free experiences.", cost: "1,200", faith: "Faith will flag when novelty bias is driving a purchase." },
-                        { trait: "Conscientiousness", letter: "C", score: 45, desc: "Moderate conscientiousness means you sometimes plan and sometimes wing it.", tip: "Automate your finances with standing orders.", cost: "800", faith: "Faith will send gentle nudges." },
-                        { trait: "Extraversion", letter: "E", score: 81, desc: "Social situations energise you but can quietly drain your account.", tip: "Suggest free or cheaper social plans first.", cost: "1,800", faith: "Faith will track social spending patterns." },
-                        { trait: "Agreeableness", letter: "A", score: 63, desc: "You find it hard to say no \u2013 splitting bills, lending money, buying rounds.", tip: "Practice saying \u201CI\u2019ll get the next one.\u201D", cost: "600", faith: "Faith will help you set boundaries." },
-                        { trait: "Neuroticism", letter: "N", score: 38, desc: "You don\u2019t stress about money, but can overlook financial risks.", tip: "Set one review day per month.", cost: "400", faith: "Faith will schedule monthly check-ins." },
+                        { trait: "Openness", letter: "O", score: 72, definition: "How curious and open you are to new ideas, experiences, and unconventional thinking.", subtraits: [{ name: "Intellectual Curiosity", insight: "You research before buying but get drawn into new finds" }, { name: "Aesthetic Sensitivity", insight: "Visual appeal strongly influences your purchases" }, { name: "Creative Imagination", insight: "You gravitate toward novel products and experiences" }], profile: "Novelty drives your spending. New releases and unique finds bypass your rational filters.", faith: "Faith will flag novelty-driven impulse buys and suggest free alternatives." },
+                        { trait: "Conscientiousness", letter: "C", score: 45, definition: "How structured, disciplined, and goal-oriented you are in daily life.", subtraits: [{ name: "Organisation", insight: "You loosely track finances but miss recurring costs" }, { name: "Productiveness", insight: "You can stick to plans but often choose not to" }, { name: "Responsibility", insight: "Short-term wants sometimes override long-term commitments" }], profile: "You default to spontaneity. Subscriptions and unreviewed spending drift unchecked.", faith: "Faith will nudge you when spending drifts from your goals." },
+                        { trait: "Extraversion", letter: "E", score: 81, definition: "How energised and motivated you are by social interaction and group activity.", subtraits: [{ name: "Sociability", insight: "You spend more in groups than when alone" }, { name: "Assertiveness", insight: "You\u2019re quick to suggest plans, often costly ones" }, { name: "Energy Level", insight: "A busy social calendar means frequent spending" }], profile: "Social situations are your biggest financial blind spot. Rounds and spontaneous nights out add up fast.", faith: "Faith will track social spending and suggest lower-cost alternatives." },
+                        { trait: "Agreeableness", letter: "A", score: 63, definition: "How cooperative, trusting, and conflict-averse you are in social situations.", subtraits: [{ name: "Compassion", insight: "You over-tip and over-gift to avoid seeming tight" }, { name: "Respectfulness", insight: "You split bills evenly even when you spent less" }, { name: "Trust", insight: "You lend money without expecting it back" }], profile: "Saying no feels harder than overspending. You absorb costs to keep the peace.", faith: "Faith will help you set boundaries without straining relationships." },
+                        { trait: "Neuroticism", letter: "N", score: 38, definition: "How sensitive you are to stress, worry, and emotional fluctuations.", subtraits: [{ name: "Anxiety", insight: "Money stress rarely keeps you up at night" }, { name: "Depression", insight: "Low mood doesn\u2019t trigger comfort spending for you" }, { name: "Emotional Volatility", insight: "You stay steady but overlook small financial leaks" }], profile: "Your calm is a strength, but financial red flags don\u2019t trigger alarm bells.", faith: "Faith will schedule check-ins to surface patterns you\u2019d naturally overlook." },
                       ].map((t) => {
                         const c = traitColors[t.trait];
                         const open = openTraits.has(t.trait);
@@ -520,17 +711,31 @@ export default function Home() {
                                 <span className="w-[26px] h-[26px] rounded-lg flex items-center justify-center text-white text-[13px] font-bold" style={{ background: `linear-gradient(135deg, ${c.from}, ${c.to})` }}>{t.letter}</span>
                                 {t.trait}
                               </div>
-                              <span className="text-[13px] font-semibold text-primary">{t.score}th</span>
+                              <span className="text-[13px] font-semibold text-primary">{t.score}</span>
                             </div>
                             <div className="h-2 bg-surface rounded overflow-hidden"><div className="h-full rounded transition-all duration-700" style={{ width: `${t.score}%`, background: `linear-gradient(90deg, ${c.from}, ${c.to})` }} /></div>
                             <div className="flex items-center gap-1 mt-2 text-xs text-primary font-semibold">See more <ChevronDown size={12} className={`transition-transform ${open ? "rotate-180" : ""}`} /></div>
                             {open && (
-                              <div className="mt-3 p-4 bg-surface rounded-xl text-[13px] text-text-secondary leading-relaxed space-y-2">
-                                <p><strong>Score: {t.score}/100</strong></p>
-                                <p>{t.desc}</p>
-                                <p><strong>Tip:</strong> {t.tip}</p>
-                                <p><strong>Est. cost if unregulated:</strong> ~{"\u00A3"}{t.cost}/year</p>
-                                <p><strong>Faith:</strong> {t.faith}</p>
+                              <div className="mt-3 bg-surface rounded-xl text-[12px] text-text-secondary leading-relaxed overflow-hidden">
+                                <div className="p-3 border-b border-white/60">
+                                  <p className="text-text-primary font-semibold mb-0.5">{t.trait} — {t.score}/100</p>
+                                  <p>{t.definition}</p>
+                                </div>
+                                <div className="p-3 border-b border-white/60 space-y-2">
+                                  {t.subtraits.map((s) => (
+                                    <div key={s.name} className="flex items-start gap-2">
+                                      <span className="w-[6px] h-[6px] rounded-full mt-[5px] shrink-0" style={{ background: `linear-gradient(135deg, ${c.from}, ${c.to})` }} />
+                                      <p><strong>{s.name}</strong> — {s.insight}</p>
+                                    </div>
+                                  ))}
+                                </div>
+                                <div className="p-3 border-b border-white/60">
+                                  <p className="text-text-primary font-semibold mb-0.5">Your Profile</p>
+                                  <p>{t.profile}</p>
+                                </div>
+                                <div className="p-3 bg-primary-ultra">
+                                  <p className="text-[12px] text-primary font-medium"><strong>How Faith Can Help</strong> — {t.faith}</p>
+                                </div>
                               </div>
                             )}
                           </div>
@@ -1091,32 +1296,38 @@ export default function Home() {
                       if (diff > 50 && scanTab > 0) setScanTab(scanTab - 1);
                     }}
                   >
-                    {/* Slide 1 — OCEAN */}
+                    {/* Slide 1 — Psychological Overview */}
                     <div className="w-full shrink-0 bg-white/95 backdrop-blur-xl p-5 border border-white/80 shadow-[0_2px_12px_rgba(0,0,0,0.06)] rounded-[20px]">
                       <h4 className="text-[15px] font-bold text-text-primary mb-3">Psychological</h4>
-                      <div className="space-y-3">
-                        {[
-                          { trait: "Openness", score: 72, insight: "Novelty-seeking makes you grab familiar comforts", from: "#A855F7", to: "#C084FC" },
-                          { trait: "Conscientiousness", score: 45, insight: "Lower planning means more spontaneous purchases", from: "#3B82F6", to: "#60A5FA" },
-                          { trait: "Extraversion", score: 81, insight: "Social situations trigger impulse buys like this", from: "#FF6B6B", to: "#FF8E8E" },
-                          { trait: "Agreeableness", score: 63, insight: "You find it hard to say no to social spending pressure", from: "#F97316", to: "#FB923C" },
-                          { trait: "Neuroticism", score: 38, insight: "Low stress about money can lead to overlooking small costs", from: "#14B8A6", to: "#2DD4BF" },
-                        ].map((t) => (
-                          <div key={t.trait}>
-                            <div className="flex justify-between items-center mb-1">
-                              <span className="text-[13px] font-semibold text-text-primary">{t.trait}</span>
-                              <span className="text-[12px] font-semibold" style={{ color: t.from }}>{t.score}th</span>
+                      <p className="text-[13px] text-text-secondary mb-4">How your personality traits influence the true cost of this purchase.</p>
+                      {[
+                        { trait: "Openness", letter: "O", score: 72, insight: "Novelty-seeking makes you grab familiar comforts" },
+                        { trait: "Conscientiousness", letter: "C", score: 45, insight: "Lower planning means more spontaneous purchases" },
+                        { trait: "Extraversion", letter: "E", score: 81, insight: "Social situations trigger impulse buys like this" },
+                        { trait: "Agreeableness", letter: "A", score: 63, insight: "You find it hard to say no to social spending pressure" },
+                        { trait: "Neuroticism", letter: "N", score: 38, insight: "Low stress about money can lead to overlooking small costs" },
+                      ].map((t) => {
+                        const c = traitColors[t.trait];
+                        const open = openTraits.has(t.trait + "-scan");
+                        return (
+                          <div key={t.trait} className="mb-[18px] last:mb-0 cursor-pointer" onClick={() => setOpenTraits((prev) => { const n = new Set(prev); const k = t.trait + "-scan"; n.has(k) ? n.delete(k) : n.add(k); return n; })}>
+                            <div className="flex justify-between items-center mb-2">
+                              <div className="flex items-center gap-2 font-sans text-[15px] font-semibold text-text-primary">
+                                <span className="w-[26px] h-[26px] rounded-lg flex items-center justify-center text-white text-[13px] font-bold" style={{ background: `linear-gradient(135deg, ${c.from}, ${c.to})` }}>{t.letter}</span>
+                                {t.trait}
+                              </div>
+                              <span className="text-[13px] font-semibold text-primary">{t.score}</span>
                             </div>
-                            <div className="h-1.5 bg-surface rounded-full overflow-hidden mb-1.5">
-                              <div className="h-full rounded-full" style={{ width: `${t.score}%`, background: `linear-gradient(90deg, ${t.from}, ${t.to})` }} />
-                            </div>
-                            <p className="text-[12px] text-text-secondary">{t.insight}</p>
+                            <div className="h-2 bg-surface rounded overflow-hidden"><div className="h-full rounded transition-all duration-700" style={{ width: `${t.score}%`, background: `linear-gradient(90deg, ${c.from}, ${c.to})` }} /></div>
+                            <div className="flex items-center gap-1 mt-2 text-xs text-primary font-semibold">See more <ChevronDown size={12} className={`transition-transform ${open ? "rotate-180" : ""}`} /></div>
+                            {open && (
+                              <div className="mt-3 p-4 bg-surface rounded-xl text-[13px] text-text-secondary leading-relaxed">
+                                <p>{t.insight}</p>
+                              </div>
+                            )}
                           </div>
-                        ))}
-                      </div>
-                      <div className="mt-4 p-3 bg-primary-ultra rounded-xl">
-                        <p className="text-[13px] text-primary font-medium"><strong>Faith says:</strong> This {"\u00A3"}1 purchase feels like {"\u00A3"}3.80 to your personality. Over a year, that adds up to ~{"\u00A3"}150 in hidden psychological cost.</p>
-                      </div>
+                        );
+                      })}
                     </div>
 
                     {/* Slide 2 — Financial (locked) */}
@@ -1138,7 +1349,7 @@ export default function Home() {
                       <div className="absolute inset-0 bg-white/60 backdrop-blur-[6px] z-10 rounded-[20px]" />
                       <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-8">
                         <Lock size={44} className="text-primary mb-3" fill="#005FCC" />
-                        <h4 className="text-[17px] font-bold text-text-primary mb-1">Financial Analysis</h4>
+                        <h4 className="text-[17px] font-bold text-text-primary mb-1">Financial</h4>
                         <p className="text-[13px] text-text-secondary mb-4">See how this purchase impacts your budget and savings goals</p>
                         <button className="h-[50px] px-8 bg-primary text-white rounded-[32px] text-[15px] font-semibold shadow-[0_4px_16px_rgba(0,95,204,0.3)]">Upgrade to Unlock</button>
                       </div>
@@ -1160,7 +1371,7 @@ export default function Home() {
                       <div className="absolute inset-0 bg-white/60 backdrop-blur-[6px] z-10 rounded-[20px]" />
                       <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-8">
                         <Lock size={44} className="text-primary mb-3" fill="#005FCC" />
-                        <h4 className="text-[17px] font-bold text-text-primary mb-1">Spending Blueprint</h4>
+                        <h4 className="text-[17px] font-bold text-text-primary mb-1">Blueprint</h4>
                         <p className="text-[13px] text-text-secondary mb-4">Get a personalised action plan to change this habit</p>
                         <button className="h-[50px] px-8 bg-primary text-white rounded-[32px] text-[15px] font-semibold shadow-[0_4px_16px_rgba(0,95,204,0.3)]">Upgrade to Unlock</button>
                       </div>
@@ -1168,6 +1379,17 @@ export default function Home() {
                   </div>
                 </div>
 
+                {/* Faith Comments — sticky, outside carousel (locked) */}
+                <h4 className="text-[22px] font-bold text-white mb-1 px-1 mt-4">Faith Comments</h4>
+                <div className="relative overflow-hidden rounded-xl">
+                  <div className="p-3 bg-primary-ultra rounded-xl">
+                    <p className="text-[13px] text-primary font-medium"><strong>Faith says:</strong> This {"\u00A3"}1 purchase feels like {"\u00A3"}3.80 to your personality. Over a year, that adds up to ~{"\u00A3"}150 in hidden psychological cost.</p>
+                  </div>
+                  <div className="absolute inset-0 bg-white/60 backdrop-blur-[6px] z-10 rounded-xl" />
+                  <div className="absolute inset-0 z-20 flex items-center justify-center">
+                    <Lock size={24} className="text-primary" fill="#005FCC" />
+                  </div>
+                </div>
 
                 {/* Alternatives based on OCEAN */}
                 {/* Alternatives carousel */}
@@ -1384,32 +1606,38 @@ export default function Home() {
                       if (diff > 50 && scanTab > 0) setScanTab(scanTab - 1);
                     }}
                   >
-                    {/* Slide 1 — OCEAN */}
+                    {/* Slide 1 — Psychological Overview */}
                     <div className="w-full shrink-0 bg-white/95 backdrop-blur-xl p-5 border border-white/80 shadow-[0_2px_12px_rgba(0,0,0,0.06)] rounded-[20px]">
                       <h4 className="text-[15px] font-bold text-text-primary mb-3">Psychological</h4>
-                      <div className="space-y-3">
-                        {[
-                          { trait: "Openness", score: 72, insight: "Novelty-seeking makes you grab familiar comforts", from: "#A855F7", to: "#C084FC" },
-                          { trait: "Conscientiousness", score: 45, insight: "Lower planning means more spontaneous purchases", from: "#3B82F6", to: "#60A5FA" },
-                          { trait: "Extraversion", score: 81, insight: "Social situations trigger impulse buys like this", from: "#FF6B6B", to: "#FF8E8E" },
-                          { trait: "Agreeableness", score: 63, insight: "You find it hard to say no to social spending pressure", from: "#F97316", to: "#FB923C" },
-                          { trait: "Neuroticism", score: 38, insight: "Low stress about money can lead to overlooking small costs", from: "#14B8A6", to: "#2DD4BF" },
-                        ].map((t) => (
-                          <div key={t.trait}>
-                            <div className="flex justify-between items-center mb-1">
-                              <span className="text-[13px] font-semibold text-text-primary">{t.trait}</span>
-                              <span className="text-[12px] font-semibold" style={{ color: t.from }}>{t.score}th</span>
+                      <p className="text-[13px] text-text-secondary mb-4">How your personality traits influence the true cost of this purchase.</p>
+                      {[
+                        { trait: "Openness", letter: "O", score: 72, insight: "Novelty-seeking makes you grab familiar comforts" },
+                        { trait: "Conscientiousness", letter: "C", score: 45, insight: "Lower planning means more spontaneous purchases" },
+                        { trait: "Extraversion", letter: "E", score: 81, insight: "Social situations trigger impulse buys like this" },
+                        { trait: "Agreeableness", letter: "A", score: 63, insight: "You find it hard to say no to social spending pressure" },
+                        { trait: "Neuroticism", letter: "N", score: 38, insight: "Low stress about money can lead to overlooking small costs" },
+                      ].map((t) => {
+                        const c = traitColors[t.trait];
+                        const open = openTraits.has(t.trait + "-scanpro");
+                        return (
+                          <div key={t.trait} className="mb-[18px] last:mb-0 cursor-pointer" onClick={() => setOpenTraits((prev) => { const n = new Set(prev); const k = t.trait + "-scanpro"; n.has(k) ? n.delete(k) : n.add(k); return n; })}>
+                            <div className="flex justify-between items-center mb-2">
+                              <div className="flex items-center gap-2 font-sans text-[15px] font-semibold text-text-primary">
+                                <span className="w-[26px] h-[26px] rounded-lg flex items-center justify-center text-white text-[13px] font-bold" style={{ background: `linear-gradient(135deg, ${c.from}, ${c.to})` }}>{t.letter}</span>
+                                {t.trait}
+                              </div>
+                              <span className="text-[13px] font-semibold text-primary">{t.score}</span>
                             </div>
-                            <div className="h-1.5 bg-surface rounded-full overflow-hidden mb-1.5">
-                              <div className="h-full rounded-full" style={{ width: `${t.score}%`, background: `linear-gradient(90deg, ${t.from}, ${t.to})` }} />
-                            </div>
-                            <p className="text-[12px] text-text-secondary">{t.insight}</p>
+                            <div className="h-2 bg-surface rounded overflow-hidden"><div className="h-full rounded transition-all duration-700" style={{ width: `${t.score}%`, background: `linear-gradient(90deg, ${c.from}, ${c.to})` }} /></div>
+                            <div className="flex items-center gap-1 mt-2 text-xs text-primary font-semibold">See more <ChevronDown size={12} className={`transition-transform ${open ? "rotate-180" : ""}`} /></div>
+                            {open && (
+                              <div className="mt-3 p-4 bg-surface rounded-xl text-[13px] text-text-secondary leading-relaxed">
+                                <p>{t.insight}</p>
+                              </div>
+                            )}
                           </div>
-                        ))}
-                      </div>
-                      <div className="mt-4 p-3 bg-primary-ultra rounded-xl">
-                        <p className="text-[13px] text-primary font-medium"><strong>Faith says:</strong> This {"\u00A3"}1 purchase feels like {"\u00A3"}3.80 to your personality. Over a year, that adds up to ~{"\u00A3"}150 in hidden psychological cost.</p>
-                      </div>
+                        );
+                      })}
                     </div>
 
                     {/* Slide 2 — Financial (locked) */}
@@ -1431,7 +1659,7 @@ export default function Home() {
                       <div className="absolute inset-0 bg-white/60 backdrop-blur-[6px] z-10 rounded-[20px]" />
                       <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-8">
                         <Lock size={44} className="text-primary mb-3" fill="#005FCC" />
-                        <h4 className="text-[17px] font-bold text-text-primary mb-1">Financial Analysis</h4>
+                        <h4 className="text-[17px] font-bold text-text-primary mb-1">Financial</h4>
                         <p className="text-[13px] text-text-secondary mb-4">See how this purchase impacts your budget and savings goals</p>
                         <button className="h-[50px] px-8 bg-primary text-white rounded-[32px] text-[15px] font-semibold shadow-[0_4px_16px_rgba(0,95,204,0.3)]">Upgrade to Unlock</button>
                       </div>
@@ -1453,12 +1681,18 @@ export default function Home() {
                       <div className="absolute inset-0 bg-white/60 backdrop-blur-[6px] z-10 rounded-[20px]" />
                       <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-8">
                         <Lock size={44} className="text-primary mb-3" fill="#005FCC" />
-                        <h4 className="text-[17px] font-bold text-text-primary mb-1">Spending Blueprint</h4>
+                        <h4 className="text-[17px] font-bold text-text-primary mb-1">Blueprint</h4>
                         <p className="text-[13px] text-text-secondary mb-4">Get a personalised action plan to change this habit</p>
                         <button className="h-[50px] px-8 bg-primary text-white rounded-[32px] text-[15px] font-semibold shadow-[0_4px_16px_rgba(0,95,204,0.3)]">Upgrade to Unlock</button>
                       </div>
                     </div>
                   </div>
+                </div>
+
+                {/* Faith Comments — sticky, outside carousel */}
+                <h4 className="text-[22px] font-bold text-white mb-1 px-1 mt-4">Faith Comments</h4>
+                <div className="p-3 bg-primary-ultra rounded-xl">
+                  <p className="text-[13px] text-primary font-medium"><strong>Faith says:</strong> This {"\u00A3"}1 purchase feels like {"\u00A3"}3.80 to your personality. Over a year, that adds up to ~{"\u00A3"}150 in hidden psychological cost.</p>
                 </div>
 
                 {/* Alternatives */}
@@ -1768,7 +2002,7 @@ export default function Home() {
 
             {/* Drawer subtitle */}
             <div className="relative z-10 px-5 pb-3">
-              <h2 className="font-sans text-[34px] font-bold text-white leading-none tracking-tight">{drawerSource === "faith" ? "History — Faith" : "History — Feels Like"}</h2>
+              <h2 className="font-sans text-[34px] font-bold text-white leading-none tracking-tight">{drawerSource === "faith" ? "Faith History" : "Feels Like History"}</h2>
             </div>
 
             {/* History items */}

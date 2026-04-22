@@ -29,6 +29,9 @@
     <clipPath id="wf-clip">
       <rect width="1024" height="1024" rx="228" ry="228" />
     </clipPath>
+    <filter id="wf-drop-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="18" flood-color="#003070" flood-opacity="0.45" />
+    </filter>
   </defs>
 
   <g clip-path="url(#wf-clip)">
@@ -37,6 +40,6 @@
     <path d="M1124,-180 C1140,180 120,300 -240,500 C-300,640 60,840 -100,1084 L1124,1084 Z" fill="url(#wf-wave2)" />
     <path d="M1124,-300 C1110,100 50,200 -360,360 C-420,480 30,700 -100,1084 L1124,1084 Z" fill="url(#wf-wave3)" />
     <path d="M1124,480 C880,660 500,900 260,980 C130,1030 0,1010 -100,1084 L1124,1084 Z" fill="url(#wf-wave4)" />
-    <text x="512" y="512" text-anchor="middle" dominant-baseline="central" font-family="SF Pro Display, -apple-system, BlinkMacSystemFont, Helvetica Neue, Arial, sans-serif" font-size="420" font-weight="700" fill="white" letter-spacing="-6">F</text>
+    <text x="512" y="512" text-anchor="middle" dominant-baseline="central" font-family="SF Pro Display, -apple-system, BlinkMacSystemFont, Helvetica Neue, Arial, sans-serif" font-size="820" font-weight="700" fill="white" letter-spacing="-6" filter="url(#wf-drop-shadow)">F</text>
   </g>
 </svg>
