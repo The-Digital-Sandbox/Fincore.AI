@@ -1381,13 +1381,32 @@ export default function Home() {
 
                 {/* Faith Comments — sticky, outside carousel (locked) */}
                 <h4 className="text-[22px] font-bold text-white mb-1 px-1 mt-4">Faith Comments</h4>
-                <div className="relative overflow-hidden rounded-xl">
-                  <div className="p-3 bg-primary-ultra rounded-xl">
-                    <p className="text-[13px] text-primary font-medium"><strong>Faith says:</strong> This {"\u00A3"}1 purchase feels like {"\u00A3"}3.80 to your personality. Over a year, that adds up to ~{"\u00A3"}150 in hidden psychological cost.</p>
+                <div className="relative overflow-hidden rounded-[20px]">
+                  <div className="bg-white/95 backdrop-blur-xl border border-white/80 shadow-[0_2px_12px_rgba(0,0,0,0.06)] overflow-hidden rounded-[20px]">
+                    <div className="p-4 border-b border-[#f0f0f0]">
+                      <p className="text-[15px] font-semibold text-text-primary mb-2">Your Personality</p>
+                      <ul className="text-[12px] text-text-secondary leading-relaxed space-y-1 list-disc pl-4">
+                        <li>High extraversion makes impulse purchases feel rewarding</li>
+                        <li>Openness drives curiosity toward new products</li>
+                      </ul>
+                    </div>
+                    <div className="p-4 border-b border-[#f0f0f0]">
+                      <p className="text-[15px] font-semibold text-text-primary mb-2">Cost Estimate</p>
+                      <ul className="text-[12px] text-text-secondary leading-relaxed space-y-1 list-disc pl-4">
+                        <li>This {"\u00A3"}1 feels like {"\u00A3"}3.80 to your personality</li>
+                      </ul>
+                    </div>
+                    <div className="p-4 bg-primary-ultra">
+                      <p className="text-[15px] font-semibold text-primary mb-2">Faith Tips</p>
+                      <ul className="text-[12px] text-primary leading-relaxed space-y-1 list-disc pl-4">
+                        <li>Wait 10 minutes before buying</li>
+                      </ul>
+                    </div>
                   </div>
-                  <div className="absolute inset-0 bg-white/60 backdrop-blur-[6px] z-10 rounded-xl" />
-                  <div className="absolute inset-0 z-20 flex items-center justify-center">
-                    <Lock size={24} className="text-primary" fill="#005FCC" />
+                  <div className="absolute inset-0 bg-white/60 backdrop-blur-[6px] z-10 rounded-[20px]" />
+                  <div className="absolute inset-0 z-20 flex flex-col items-center justify-center gap-2">
+                    <Lock size={28} className="text-primary" fill="#005FCC" />
+                    <button className="h-[36px] px-6 bg-primary text-white rounded-full text-[12px] font-semibold shadow-[0_4px_16px_rgba(0,95,204,0.3)]">Upgrade to Unlock</button>
                   </div>
                 </div>
 
@@ -1691,8 +1710,29 @@ export default function Home() {
 
                 {/* Faith Comments — sticky, outside carousel */}
                 <h4 className="text-[22px] font-bold text-white mb-1 px-1 mt-4">Faith Comments</h4>
-                <div className="p-3 bg-primary-ultra rounded-xl">
-                  <p className="text-[13px] text-primary font-medium"><strong>Faith says:</strong> This {"\u00A3"}1 purchase feels like {"\u00A3"}3.80 to your personality. Over a year, that adds up to ~{"\u00A3"}150 in hidden psychological cost.</p>
+                <div className="bg-white/95 backdrop-blur-xl rounded-[20px] border border-white/80 shadow-[0_2px_12px_rgba(0,0,0,0.06)] overflow-hidden">
+                  <div className="p-4 border-b border-[#f0f0f0]">
+                    <p className="text-[15px] font-semibold text-text-primary mb-2">Your Personality</p>
+                    <ul className="text-[12px] text-text-secondary leading-relaxed space-y-1 list-disc pl-4">
+                      <li>High extraversion makes impulse purchases feel rewarding</li>
+                      <li>Openness drives curiosity toward new and trending products</li>
+                      <li>Moderate agreeableness amplifies spending in social settings</li>
+                    </ul>
+                  </div>
+                  <div className="p-4 border-b border-[#f0f0f0]">
+                    <p className="text-[15px] font-semibold text-text-primary mb-2">Cost Estimate</p>
+                    <ul className="text-[12px] text-text-secondary leading-relaxed space-y-1 list-disc pl-4">
+                      <li>This {"\u00A3"}1 purchase feels like <strong className="text-text-primary">{"\u00A3"}3.80</strong> to your personality</li>
+                      <li>Annual hidden psychological cost: ~<strong className="text-text-primary">{"\u00A3"}150</strong></li>
+                    </ul>
+                  </div>
+                  <div className="p-4 bg-primary-ultra">
+                    <p className="text-[15px] font-semibold text-primary mb-2">Faith Tips</p>
+                    <ul className="text-[12px] text-primary leading-relaxed space-y-1 list-disc pl-4">
+                      <li>Wait 10 minutes before buying — the urge usually fades</li>
+                    </ul>
+                    <p className="text-[12px] text-primary leading-relaxed mt-1.5 text-center">Faith will remind you next time this pattern triggers</p>
+                  </div>
                 </div>
 
                 {/* Alternatives */}
